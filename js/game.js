@@ -1,15 +1,11 @@
-class Game{
-    constructor(){
-
-    }
+class Game{ //A ATIVIDADE NESSE ARQUIVO É NA LINHA 109, 130 E 159. É NECESSÁRIO ESCOLHER EM CADA UM, APENAS 1 DE 4, TIRANDO O // DA FRENTE
+    constructor(){              }
     getState() {
         var gameStateRef = database.ref('gameState');
         gameStateRef.on("value", function (data) {
             gameState = data.val();
         })
-
     }
-
     update(state) {
         database.ref('/').update({
             gameState: state
@@ -28,15 +24,10 @@ class Game{
             }
     player1 = createSprite(200,500);
     player1.addImage("player1",player_img);
-    
     player2 = createSprite(800,500);
     player2.addImage("player2", player_img);
     players=[player1,player2];
-
-    obstacleGroup = new Group();
-    
-        console.log(frameCount)
-       
+    obstacleGroup = new Group();     
         }
     play(){
         
@@ -116,6 +107,10 @@ class Game{
                  }
                  if(frameCount % 40 === 0){
                     //chame addObstacles()
+                     //on.addObstacles();
+                     //this.addObstacles();
+                     //set.addObstacles();
+                     //this.addobstacles();
                  }
                  
                   if (player.index !== null) {
@@ -132,19 +127,15 @@ class Game{
                       }
 
                       if(obstacleGroup.isTouching(players)){
-                       //escreva o código para atribuir o valor de gameState a End (fim)
+                       //escolha o código para atribuir o valor de gameState a End (fim)
+                          //gameState = 0;
+                          //gameState = 1;
+                          //gameState = 2;
+                          //gameState = 3;
                       }
                   }
                 }
             
-                
-
-         
-         
-        
-         
-
-    
                 showRank() {
                     alert("Incrível !! Você terminou o jogo! Sua classificação é :" +player.rank)
                   }
@@ -165,9 +156,11 @@ class Game{
     addObstacles()
     {       
             var x, y;
-            //escreva o código para criar um obstáculo na posição x aleatória.
-            
-            
+            //escolha o código para criar um obstáculo na posição x aleatória.
+            //x = random(0, width-100);
+            //x,y = random(0, width-100);
+            //y = random(0, width-100);
+            //y,x = random(0, width-100);
             y = 0
             var obstacle = createSprite(x, y);
             obstacle.addImage("obstacle", obstacleImage);
